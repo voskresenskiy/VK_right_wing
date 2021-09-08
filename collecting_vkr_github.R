@@ -104,7 +104,7 @@ comments_collection = function(walls, ){
             com_df$group = rep(-o_id, nrow(com_df))
             com_df$post_id = rep(pid, nrow(com_df))
             
-            if ('attachments' %in% colnames(comm$comments)){
+            if ('attachments' %in% colnames(comm$comments) & attachments = T){
               
               attachments = comm$comments$attachments %>% 
                 map(unlist) %>%
